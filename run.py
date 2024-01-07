@@ -2,6 +2,7 @@
 
 import logging
 import Keep_alive
+import os
 from colorama import Fore
 from TwitchChannelPointsMiner import TwitchChannelPointsMiner
 from TwitchChannelPointsMiner.logger import LoggerSettings, ColorPalette
@@ -17,8 +18,8 @@ from TwitchChannelPointsMiner.classes.entities.Streamer import Streamer, Streame
 Keep_alive.keep_alive()
 
 twitch_miner = TwitchChannelPointsMiner(
-    username="ImSkyCake",
-    password="PKp63cSWXfGcWH",           # If no password will be provided, the script will ask interactively
+      username=os.getenv("user"),
+      password=os.getenv("passw"),          # If no password will be provided, the script will ask interactively
     claim_drops_startup=True,                  # If you want to auto claim all drops from Twitch inventory on the startup
     priority=[                                  # Custom priority in this case for example:
         Priority.STREAK,                        # - We want first of all to catch all watch streak from all streamers
