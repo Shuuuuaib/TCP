@@ -6,7 +6,7 @@ app = Flask('')
 
 @app.route('/')
 def main():
-  return "Sky is alive."
+  return os.environ.get("user") + " is alive."
 
 
 def run():
