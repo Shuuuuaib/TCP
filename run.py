@@ -109,7 +109,7 @@ twitch_miner = TwitchChannelPointsMiner(
 twitch_miner.mine(
     [
         Streamer(os.environ.get("streamer1"),settings=StreamerSettings(make_predictions=True,follow_raid=False,claim_drops=False,watch_streak=True)),
-    Streamer(os.environ.get("streamer1"),settings=StreamerSettings(make_predictions=True,follow_raid=False,claim_drops=False,watch_streak=True)),
+    Streamer(os.environ.get("streamer2"),settings=StreamerSettings(make_predictions=True,follow_raid=False,claim_drops=False,watch_streak=True)),
 
     ],                                  # Array of streamers (order = priority)
     followers=False,                    # Automatic download the list of your followers
